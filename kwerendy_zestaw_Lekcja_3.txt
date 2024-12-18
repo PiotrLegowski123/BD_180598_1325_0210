@@ -19,3 +19,7 @@ SELECT * FROM kreatura WHERE nazwa LIKE "%or%" AND udzwig >= 30 AND udzwig <= 70
 3.
 3.1.
 SELECT * FROM zasob WHERE MONTH(dataPozyskania) = 7 OR MONTH(dataPozyskania) = 8
+3.2.
+SELECT * FROM zasob WHERE rodzaj != "NULL" ORDER BY waga;
+3.3.
+SELECT * FROM kreatura WHERE dataUr IS NOT NULL ORDER BY dataUr LIMIT 5;
