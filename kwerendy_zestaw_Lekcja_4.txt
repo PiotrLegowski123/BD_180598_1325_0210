@@ -9,3 +9,8 @@ SELECT rodzaj, AVG(2024 - YEAR(dataUr)) AS sredni_wiek FROM kreatura GROUP BY ro
 2.1.
 SELECT rodzaj, SUM(waga * ilosc ) AS suma_wag FROM zasob GROUP BY rodzaj;
 2.2.
+SELECT nazwa, AVG(waga * ilosc) AS srednia_waga FROM zasob GROUP BY nazwa HAVING SUM(ilosc) >= 4 AND SUM(waga * ilosc) > 10;
+2.3.
+SELECT rodzaj, COUNT(DISTINCT nazwa) AS rozne_nazwy FROM zasob GROUP BY rodzaj HAVING SUM(ilosc) > 1;
+3.
+3.1.
