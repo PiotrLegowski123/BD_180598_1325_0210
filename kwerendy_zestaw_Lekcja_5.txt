@@ -2,3 +2,5 @@
 1.1.
 
 1.2.
+SELECT kreatura_2.nazwa FROM kreatura_2 LEFT JOIN uczestnicy ON kreatura_2.idKreatury = uczestnicy.id_uczestnika WHERE uczestnicy.id_uczestnika IS NULL;
+1.3.
