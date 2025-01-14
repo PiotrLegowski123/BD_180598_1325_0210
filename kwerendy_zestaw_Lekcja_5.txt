@@ -1,2 +1,4 @@
-SELECT * FROM ekwipunek LEFT JOIN kreatura ON ekwipunek.idKreatury = kreatura.idKreatury LEFT JOIN zasob ON ekwipunek.idZasobu = zasob.idZasobu;
+1.
+1.1.
 
+1.2.
