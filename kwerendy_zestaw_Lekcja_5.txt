@@ -11,3 +11,8 @@ SELECT wyprawa.nazwa, COUNT(uczestnicy.id_uczestnika) AS ilosc_uczestnikow, GROU
 , ') ilosc_ekwipunku FROM wyprawa LEFT JOIN uczestnicy ON wyprawa.id_wyprawy = uczestnicy.id_wyprawy LEFT JOIN kreatura ON
  uczestnicy.id_uczestnika = kreatura.idKreatury GROUP BY wyprawa.nazwa;
 2.2.
+SELECT wyprawa.nazwa, etapy_wyprawy.sektor, wyprawa.kierownik  FROM wyprawa JOIN etapy_wyprawy ON wyprawa.id_wyprawy = etapy_wyprawy.idWyprawy ORDER BY wyprawa.data_rozpoczecia, etapy_wyprawy.kolejnosc;
+3.
+3.1.
+SELECT etapy_wyprawy.sektor, IFNULL(COUNT(etapy_wyprawy.idEtapu), 0) AS ilosc_odwiedzin FROM wyprawa JOIN etapy_wyprawy ON wyprawa.id_wyprawy = etapy_wyprawy.idWyprawy GROUP BY etapy_wyprawy.sektor;
+3.2.
