@@ -20,4 +20,9 @@ SELECT kreatura.nazwa, zasob.nazwa  FROM ekwipunek LEFT JOIN kreatura ON ekwipun
 3.3.
 SELECT kreatura.nazwa FROM kreatura LEFT JOIN ekwipunek ON kreatura.idKreatury = ekwipunek.idKreatury WHERE ekwipunek.idKreatury IS NULL;
 4.
-4. 1.
+4.1.
+
+4.2.
+
+4.3.
+SELECT CONCAT(A.nazwa, ' - ', B.nazwa) AS nazwy FROM kreatura A, kreatura B WHERE B.idKreatury = A.idKreatury +5;
